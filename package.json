@@ -1,0 +1,49 @@
+{
+  "name": "relay-modern-udemy",
+  "description": "Relay Modern Course",
+  "version": "1.0.0",
+  "author": "Sibelius Seraphini",
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "mdx-code": "^1.1.3",
+    "mdx-deck": "^1.6.7",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "mdx-deck-live-code": "^1.0.0",
+    "raw-loader": "^1.0.0"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "mdx-deck build src/deck.mdx",
+    "help": "mdx-deck",
+    "image": "mdx-deck screenshot src/deck.mdx",
+    "pdf": "mdx-deck pdf src/deck.mdx",
+    "copy:static": "cp -r src/img dist",
+    "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
+    "setup": "mdx-deck src/01-setup/deck.mdx",
+    "setup:ts": "mdx-deck src/01a-setup-typescript/deck.mdx",
+    "environment": "mdx-deck src/02-environment/deck.mdx",
+    "query": "mdx-deck src/03-query-renderer/deck.mdx",
+    "query-variables": "mdx-deck src/03a-query-renderer-variables/deck.mdx",
+    "create-query-renderer": "mdx-deck src/03b-create-query-renderer/deck.mdx",
+    "fragment-container": "mdx-deck src/04-fragments/deck.mdx",
+    "compose-fragments": "mdx-deck src/05-compose-fragments/deck.mdx",
+    "refetch-container": "mdx-deck src/06-refetch-container/deck.mdx",
+    "refetch-hooks": "mdx-deck src/06a-refetch-hooks/deck.mdx",
+    "mutations": "mdx-deck src/07-mutations/deck.mdx",
+    "network-layer": "mdx-deck src/08-network-layer/deck.mdx",
+    "network-auth": "mdx-deck src/08b-network-autentication/deck.mdx",
+    "uploadables": "mdx-deck src/08c-network-uploadables/deck.mdx",
+    "network-cache": "mdx-deck src/08d-network-cache/deck.mdx",
+    "network-logger": "mdx-deck src/08e-network-debug/deck.mdx",
+    "network-observable": "mdx-deck src/08f-network-observable/deck.mdx",
+    "argument-definition": "mdx-deck src/09-argument-definition/deck.mdx",
+    "include": "mdx-deck src/10-include-skip/deck.mdx",
+    "simulated-defer": "mdx-deck src/11-simulating-defer/deck.mdx"
+  },
+  "dependencies": {
+    "codemirror": "^5.43.0",
+    "react-codemirror2": "^5.1.0"
+  }
+}

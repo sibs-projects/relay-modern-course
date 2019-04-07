@@ -1,0 +1,59 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Relay Modern Network Layer
+<ul>
+  <Appear>
+    <li>It decides how GraphQL queries and subscriptions will be handled in network</li>
+    <li>It defines how GraphQL queries will be fetched</li>
+    <li>It defines how GraphQL subscriptions will be handled</li>
+  </Appear>
+</ul>
+
+```notes
+```
+---
+<CodeSurfer
+  title="Network Layer Deep Dive"
+  code={require('!raw-loader!./NetworkLayer.ts')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "Network Layer: how to fetch queries and handle subscriptions" },
+    { range: [101,106], notes: 'Network accepts a fetchFn and a subscriptionFn' },
+    { range: [101,106], notes: 'fetchFn will execute GraphQL queries' },
+    { range: [101,106], notes: 'subscriptionsFN is optional and will execute GraphQL subscriptions' },
+    { range: [22,53], notes: 'FetchFn Deep Dive' },
+    { range: [22,53], notes: 'fetchFn + types' },
+    { lines: [25], notes: 'fetchFn can return a value (sync)' },
+    { lines: [24], notes: 'fetchFn can return a promise (single value)' },
+    { lines: [23], notes: 'fetchFn can return an observable (for defer and stream)' },
+    { range: [36,39], notes: 'We create a POST body from our request text' },
+    { range: [40,43], notes: 'We define headers of our API call' },
+    { range: [45,50], notes: 'We execute a POST to our GraphQL' },
+    { lines: [52], notes: 'We return the json data from our GraphQL server response' },
+    { range: [56,99], notes: 'SubscriptionFn Deep Dive' },
+    { range: [56,99], notes: 'subscriptionFN + types' },
+    { range: [68,71], notes: 'We create a subscription client' },
+    { range: [73,83], notes: 'We define Observables callbacks to update Relay' },
+    { range: [87,92], notes: 'We send a GraphQL subscription request to our GraphQL server' },
+    { range: [94,98], notes: 'We return a dispose method, so subscription can be stopped' },
+    { notes: "Network Layer: Queries + Subscriptions configs" },
+  ]}
+/>
+---
+```notes
+```

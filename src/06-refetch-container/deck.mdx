@@ -1,0 +1,46 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Refetch Container
+<ul>
+  <Appear>
+    <li>A Fragment container that can fetch a new GraphQL query</li>
+    <li>The new GraphQL query can have different variables</li>
+    <li>After the refetch it will re-render the component with the new result</li>
+  </Appear>
+</ul>
+
+```notes
+```
+---
+<CodeSurfer
+  title="Refetch Container Deep Dive"
+  code={require('!raw-loader!./PostRefetch.tsx')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "Refetch container let you get more data after initial fetch" },
+    { range: [53,75], notes: '3 params: Component, fragments specs and Refetch Query' },
+    { range: [54, 54], notes: 'The component requiring the fragment data' },
+    { range: [57, 63], notes: 'The fragments declared by this component' },
+    { range: [65, 74], notes: 'The GraphQL that will be execute when relay.refetch is called' },
+    { range: [7, 25], notes: 'Types for relay inject prop: environment + refetch function' },
+    { range: [26, 51], notes: 'The Post component that will refresh/refetch new post data when clicking the button' },
+    { range: [27,27], notes: 'onRefresh function that will call relay.refetch with post id to be refetched' },
+    { range: [27,27], notes: 'After GraphQL query is resolved, all components that depends on this data will be updated' },
+    { notes: 'We can pass many variables to customize our refetch queries' },
+  ]}
+/>

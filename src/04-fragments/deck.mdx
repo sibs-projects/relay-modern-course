@@ -1,0 +1,72 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Fragment Containers
+<ul>
+  <Appear>
+    <li>It improves reusability</li>
+    <li>It let Relay knows which data each components needs</li>
+    <li>It colocates data besides the component</li>
+  </Appear>
+</ul>
+
+```notes
+A Fragment Container let you declare component data requirements
+```
+---
+### Types of Fragment Containers
+<ul>
+  <Appear>
+    <li>createFragmentContainer - container used to declare component data requirements</li>
+    <li>createPaginationContainer - a container that will refetch data based on pagination</li>
+    <li>createRefetchContainer - a container that has a refetch query to get more data afterwards</li>
+  </Appear>
+</ul>
+
+---
+<CodeSurfer
+  title="Relay Modern - createFragmentContainer"
+  code={require('!raw-loader!./FragmentContainerExample.js')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "How to use a createFragmentContainer to reuse parts of query" },
+    { range: [13,32], notes: 'This is our Post component and PostFragmentContainer' },
+    { range: [23, 32], notes: 'createFragmentContainer defines fragments that this component will need' },
+    { range: [23, 32], notes: 'The convention is to use <ComponentFileName>_<propName>' },
+    { range: [9, 21], notes: 'After changing any query or fragment run relay-compiler to update generated artifacts' },
+    { range: [9, 21], notes: 'Relay will generate Flow/TypeScript types for each of your fragments' },
+    { range: [9, 21], notes: 'This will make sure your code is properly typed' },
+    { range: [40, 46], notes: 'We going to use way Post_post fragment on our QR query' },
+    { range: [58, 61], notes: 'We going to pass the post from resolved query data to our PostFragmentContainer' },
+    { range: [13,32], notes: 'Each fragment will be a prop in Post component' },
+    { notes: "A best practice is to always use fragment containers instead of quering directly on QR" },
+  ]}
+/>
+---
+### Reference
+<ul>
+  <Appear>
+    <li>
+        <a href='https://medium.com/entria/relay-apollo-anti-pattern-d9f4dea47738'>
+           Relay/Apollo anti-pattern
+        </a>
+    </li>
+  </Appear>
+</ul>
+---
+```notes
+```

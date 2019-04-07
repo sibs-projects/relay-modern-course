@@ -1,0 +1,43 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Refetch Container with React Hooks
+<ul>
+  <Appear>
+    <li>Hooks will abstract your refetch logic state</li>
+    <li>Hooks will let reuse state logic when doing refetches</li>
+  </Appear>
+</ul>
+
+```notes
+```
+---
+<CodeSurfer
+  title="useOnRelayRefresh: Refetch + Hooks"
+  code={require('!raw-loader!./useOnRefresh.tsx')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "A hook to reuse loading state logics among components" },
+    { range: [3,6], notes: 'it receives relay refetch prop and a function to customized refetch variables' },
+    { lines: [7], notes: 'It has a loading state that updates based on refetch state' },
+    { range: [9, 15], notes: 'getRefetchVariables return the variables from the argument function or an empty object' },
+    { range: [17, 34], notes: 'onRefresh will execute the refetch query and update state based on it' },
+    { range: [30, 32], notes: 'Refetch function has a callback called when the refetch is done' },
+    { range: [36, 39], notes: 'We return both isLoading state and onRefresh function to be use on any component' },
+    { notes: 'Hooks + Relay Modern let you have less code while keeping performance' },
+  ]}
+/>
