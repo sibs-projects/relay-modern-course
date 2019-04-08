@@ -3,10 +3,15 @@
   "description": "Relay Modern Course",
   "version": "1.0.0",
   "author": "Sibelius Seraphini",
+  "workspaces": {
+    "packages": [
+        "packages/*"
+    ]
+  },
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "mdx-code": "^1.1.3",
-    "mdx-deck": "^1.6.7",
+    "mdx-deck": "^1.7.3",
     "mdx-deck-code-surfer": "^0.5.5",
     "mdx-deck-live-code": "^1.0.0",
     "raw-loader": "^1.0.0"
@@ -22,6 +27,7 @@
     "copy:static": "cp -r src/img dist",
     "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
     "setup": "mdx-deck src/01-setup/deck.mdx",
+    "setup:build": "yarn workspace 01-setup build",
     "setup:ts": "mdx-deck src/01a-setup-typescript/deck.mdx",
     "environment": "mdx-deck src/02-environment/deck.mdx",
     "query": "mdx-deck src/03-query-renderer/deck.mdx",
