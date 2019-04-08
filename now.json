@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "relay-modern-course",
+  "public": true,
+  "alias": [
+    "relay-modern-course.now.sh"
+  ],
+  "builds": [
+    {
+      "src": "packages/01-setup/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/01-setup/main.js",
+      "dest": "/packages/01-setup/main.js"
+    },
+    {
+      "src": "/01-setup/(.*)",
+      "dest": "/packages/01-setup/index.html"
+    }
+  ]
+}
