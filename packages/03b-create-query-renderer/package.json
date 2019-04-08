@@ -1,0 +1,13 @@
+{
+  "name": "03b-create-query-renderer",
+  "description": "03b-create-query-renderer deck",
+  "version": "1.0.0",
+  "author": "Sibelius Seraphini",
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "now-build": "mdx-deck build --no-html ./deck.mdx && cp -r ./img dist",
+    "start": "mdx-deck ./deck.mdx"
+  }
+}

@@ -27,7 +27,6 @@
     "copy:static": "cp -r src/img dist",
     "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
     "setup": "mdx-deck src/01-setup/deck.mdx",
-    "setup:build": "yarn workspace 01-setup build",
     "setup:ts": "mdx-deck src/01a-setup-typescript/deck.mdx",
     "environment": "mdx-deck src/02-environment/deck.mdx",
     "query": "mdx-deck src/03-query-renderer/deck.mdx",
