@@ -2,6 +2,10 @@
 
 Slides companion to Relay Modern Course
 
+## How to check it out
+
+Go here: https://relay-modern-course.now.sh/packages/
+
 ## How to run it?
 
 check package.json there is one yarn script for each lesson
