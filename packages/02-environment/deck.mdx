@@ -1,0 +1,51 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Relay Modern Environment
+<ul>
+  <Appear>
+    <li>It handles Relay configuration</li>
+    <li>Cache Storage</li>
+    <li>Network Handling</li>
+  </Appear>
+</ul>
+
+```notes
+Cache Storage that will store records/node in memory, on localstorage/asyncstorage or anywhere else
+Network will send GraphQL requests to your GraphQL server, it could also handle cache, defer and stream operations
+```
+---
+<CodeSurfer
+  title="Relay Modern Environment Deep Dive"
+  code={require('!raw-loader!./Environment.js')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "Environment handles Relay configuration (Cache + Network)" },
+    { range: [35,40], notes: 'Environment = Cache Store + Network configuration' },
+    { range: [32,33], notes: 'Cache Store: defines how the store will cache the data' },
+    { range: [32,33], notes: 'RecordSource will cache them in memory' },
+    { range: [8,30], notes: 'Network: defines how the Relay will communicate with your GraphQL server' },
+    { range: [8,26], notes: 'FetchFunction: simple fetch that will send GraphQL requests to your GraphQL server' },
+    { range: [8,26], notes: 'FetchFunction: we can implement cache in query level in the network layer' },
+    { notes: "Environment: Cache and Network configuration" },
+  ]}
+/>
+---
+```notes
+Your Relay Modern Environment can evolve as your app requirements changes,
+it can easily attend simpler and complex workflows
+```

@@ -1,0 +1,53 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### GraphQL Variables
+<ul>
+  <Appear>
+    <li>It let changes GraphQL query behavior</li>
+  </Appear>
+</ul>
+
+```notes
+We are going to pass variables to graphql queries to modify behavior
+```
+---
+<CodeSurfer
+  title="Relay Modern Variables"
+  code={require('!raw-loader!./QueryRendererVariables.js')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "We can pass variables to GraphQL Queries" },
+    { notes: "We are going to fetch a specific post by it is id" },
+    { range: [19,48], notes: 'Our QR with query and variables' },
+    { range: [34, 36], notes: 'Usually we get this variables from route or navigation' },
+    { range: [34, 36], notes: 'We are getting post id from :id param using React Router 4' },
+    { lines: [27], notes: 'We define variables using $<nameOfVariable>: <type>' },
+    { lines: [27], notes: 'In this example `id` variable is of type required ID' },
+    { range: [27,32], notes: 'We use this variable on post resolve that accept an id argument' },
+    { range: [27,32], notes: 'It will retrieve a post by id' },
+    { lines: [46], notes: 'We going to render a Post component instead of a simple <span>' },
+    { range: [6,18], notes: 'Post is define like this, it will render both title and description' },
+    { range: [6, 12], notes: 'If define post types by hand, later on we gonna learn how to make Relay generate this types for us' },
+    { notes: "You can have as many variables as you need, just need to define all of them" },
+  ]}
+/>
+---
+```notes
+Your Relay Modern Environment can evolve as your app requirements changes,
+it can easily attend simpler and complex workflows
+```

@@ -1,0 +1,45 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Relay Network Logger
+<ul>
+  <Appear>
+    <li>It helps you debug your network layer</li>
+    <li>It gives information about all GraphQL queries and subscriptions</li>
+    <li>It shows query, variables, cache, response and execution time</li>
+  </Appear>
+</ul>
+
+```notes
+```
+---
+<CodeSurfer
+  title="Network Layer Deep Dive"
+  code={require('!raw-loader!./RelayNetworkLogger.ts')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "Relay Network Logger will log all your GraphQL queries and subscriptions" },
+    { range: [1, 2], notes: 'It is not a public api yet' },
+    { range: [7,13], notes: 'The basic idea is to wrap your fetch and subscription functions when in __DEV__ mode' },
+    { lines: [15], notes: 'Pass the wrapped version to Network.create and you will get logs' },
+  ]}
+/>
+---
+<Image
+    src='img/RelayNetworkLogger.png'
+    size='1200px 400px'
+    />

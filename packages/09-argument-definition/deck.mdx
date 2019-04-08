@@ -1,0 +1,46 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### Argument Definition
+<ul>
+  <Appear>
+    <li>@argumentDefinitions let you define local variables to fragments</li>
+    <li>You can override default arguments of a fragment using @arguments</li>
+    <li>They are very useful when composing fragments</li>
+  </Appear>
+</ul>
+
+```notes
+```
+---
+<CodeSurfer
+  title="@argumentDefinition and @arguments"
+  code={require('!raw-loader!./Arguments.js')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "How to create local variables and customize fragments behavior" },
+    { range: [7,16], notes: 'We have a simple component that render a list of Users' },
+    { range: [18, 36], notes: 'The fragment container of this component, has 2 local variables: $first and $includeMe' },
+    { range: [22, 25], notes: 'Fragment variables are declared using @argumentDefinition directive' },
+    { range: [22, 25], notes: 'They have a name, a type and could also a defaultValue' },
+    { lines: [26], notes: 'The local arguments can be used on fragments/queries much like global arguments' },
+    { range: [38, 40], notes: 'UsersWithMe wants to render a list of users with includeMe equals true' },
+    { range: [42, 52], notes: 'We can override defaultValue of Users_query fragment includeMe using @arguments' },
+    { lines: [49], notes: 'You can use @arguments when spreading a fragment in another fragment/query' },
+    { notes: "Arguments can make your fragments more generic, making it easy to reuse them" },
+  ]}
+/>

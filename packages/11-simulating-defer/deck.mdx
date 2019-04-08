@@ -1,0 +1,48 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import Code from 'mdx-code';
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from '../Cover';
+import { Intro } from '../Intro';
+
+export { default as theme } from '../theme'
+
+<Head>
+  <title>Relay Modern Deep Dive Course</title>
+</Head>
+
+<Cover />
+---
+### How to simulate @defer using @include
+<ul>
+  <Appear>
+    <li>@defer are still experimental in both GraphQL, Relay Modern and Apollo</li>
+    <li>Let's see how to simulate defer using @include directive</li>
+    <li>We going to use a custom hook to make our life and code simpler</li>
+  </Appear>
+</ul>
+---
+<CodeSurfer
+  title="Simulating Defer"
+  code={require('!raw-loader!./SimulatedDefer.js')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "Simulating Defer using @include" },
+    { notes: "Defer is to skip some fields processing to later time" },
+    { range: [43,83], notes: 'We have our Post Refetch Container' },
+    { range: [48, 52], notes: 'We have an isMounted variables that will be true when the component is mounted' },
+    { range: [57, 67], notes: 'We will only fetch comments when component isMounted is true' },
+    { range: [70, 81], notes: 'Our refetch query receives post id and isMounted arguments' },
+    { range: [16, 41], notes: 'Our Post will first render post title and description' },
+    { range: [16, 41], notes: 'It will render comments when refetch after component mounted happened' },
+    { range: [34, 40], notes: 'We render title and description and comments if available' },
+    { range: [22, 32], notes: 'Comments are only rendered if available' },
+    { range: [17, 20], notes: 'useSimulateRelayDefer will execute a refetch with given variables after mount' },
+    { range: [7, 14], notes: 'useSimulateRelayDefer use useEffect without dependencies to be run only once' },
+    { range: [7, 14], notes: 'it will do a refetch using getRefetchVariables return' },
+    { notes: "@include will fetch more data after the componente has mounted" },
+    { notes: "@defer will fetch more data after another query is done" },
+  ]}
+/>
