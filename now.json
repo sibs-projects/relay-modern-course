@@ -12,6 +12,132 @@
       "config": {
         "distDir": "dist"
       }
+    },
+    {
+      "src": "packages/02-environment/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/03-query-renderer/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/03a-query-renderer-variables/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/03b-create-query-renderer/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/04-fragments/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/05-compose-fragments/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/06-refetch-container/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/06a-refetch-hooks/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/07-mutations/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/08-network-layer/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/08b-network-autentication/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/08c-network-uploadables/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/08d-network-cache/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/08e-network-debug/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/08f-network-observable/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/09-argument-definition/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/10-include-skip/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "packages/11-simulating-defer/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
@@ -22,6 +148,150 @@
     {
       "src": "/01-setup/(.*)",
       "dest": "/packages/01-setup/index.html"
+    },
+    {
+      "src": "/02-environment/main.js",
+      "dest": "/packages/02-environment/main.js"
+    },
+    {
+      "src": "/02-environment/(.*)",
+      "dest": "/packages/02-environment/index.html"
+    },
+    {
+      "src": "/03-query-renderer/main.js",
+      "dest": "/packages/03-query-renderer/main.js"
+    },
+    {
+      "src": "/03-query-renderer/(.*)",
+      "dest": "/packages/03-query-renderer/index.html"
+    },
+    {
+      "src": "/03a-query-renderer-variables/main.js",
+      "dest": "/packages/03a-query-renderer-variables/main.js"
+    },
+    {
+      "src": "/03a-query-renderer-variables/(.*)",
+      "dest": "/packages/03a-query-renderer-variables/index.html"
+    },
+    {
+      "src": "/03b-create-query-renderer/main.js",
+      "dest": "/packages/03b-create-query-renderer/main.js"
+    },
+    {
+      "src": "/03b-create-query-renderer/(.*)",
+      "dest": "/packages/03b-create-query-renderer/index.html"
+    },
+    {
+      "src": "/04-fragments/main.js",
+      "dest": "/packages/04-fragments/main.js"
+    },
+    {
+      "src": "/04-fragments/(.*)",
+      "dest": "/packages/04-fragments/index.html"
+    },
+    {
+      "src": "/05-compose-fragments/main.js",
+      "dest": "/packages/05-compose-fragments/main.js"
+    },
+    {
+      "src": "/05-compose-fragments/(.*)",
+      "dest": "/packages/05-compose-fragments/index.html"
+    },
+    {
+      "src": "/06-refetch-container/main.js",
+      "dest": "/packages/06-refetch-container/main.js"
+    },
+    {
+      "src": "/06-refetch-container/(.*)",
+      "dest": "/packages/06-refetch-container/index.html"
+    },
+    {
+      "src": "/06a-refetch-hooks/main.js",
+      "dest": "/packages/06a-refetch-hooks/main.js"
+    },
+    {
+      "src": "/06a-refetch-hooks/(.*)",
+      "dest": "/packages/06a-refetch-hooks/index.html"
+    },
+    {
+      "src": "/07-mutations/main.js",
+      "dest": "/packages/07-mutations/main.js"
+    },
+    {
+      "src": "/07-mutations/(.*)",
+      "dest": "/packages/07-mutations/index.html"
+    },
+    {
+      "src": "/08-network-layer/main.js",
+      "dest": "/packages/08-network-layer/main.js"
+    },
+    {
+      "src": "/08-network-layer/(.*)",
+      "dest": "/packages/08-network-layer/index.html"
+    },
+    {
+      "src": "/08b-network-autentication/main.js",
+      "dest": "/packages/08b-network-autentication/main.js"
+    },
+    {
+      "src": "/08b-network-autentication/(.*)",
+      "dest": "/packages/08b-network-autentication/index.html"
+    },
+    {
+      "src": "/08c-network-uploadables/main.js",
+      "dest": "/packages/08c-network-uploadables/main.js"
+    },
+    {
+      "src": "/08c-network-uploadables/(.*)",
+      "dest": "/packages/08c-network-uploadables/index.html"
+    },
+    {
+      "src": "/08d-network-cache/main.js",
+      "dest": "/packages/08d-network-cache/main.js"
+    },
+    {
+      "src": "/08d-network-cache/(.*)",
+      "dest": "/packages/08d-network-cache/index.html"
+    },
+    {
+      "src": "/08e-network-debug/main.js",
+      "dest": "/packages/08e-network-debug/main.js"
+    },
+    {
+      "src": "/08e-network-debug/(.*)",
+      "dest": "/packages/08e-network-debug/index.html"
+    },
+    {
+      "src": "/08f-network-observable/main.js",
+      "dest": "/packages/08f-network-observable/main.js"
+    },
+    {
+      "src": "/08f-network-observable/(.*)",
+      "dest": "/packages/08f-network-observable/index.html"
+    },
+    {
+      "src": "/09-argument-definition/main.js",
+      "dest": "/packages/09-argument-definition/main.js"
+    },
+    {
+      "src": "/09-argument-definition/(.*)",
+      "dest": "/packages/09-argument-definition/index.html"
+    },
+    {
+      "src": "/10-include-skip/main.js",
+      "dest": "/packages/10-include-skip/main.js"
+    },
+    {
+      "src": "/10-include-skip/(.*)",
+      "dest": "/packages/10-include-skip/index.html"
+    },
+    {
+      "src": "/11-simulating-defer/main.js",
+      "dest": "/packages/11-simulating-defer/main.js"
+    },
+    {
+      "src": "/11-simulating-defer/(.*)",
+      "dest": "/packages/11-simulating-defer/index.html"
     }
   ]
 }
