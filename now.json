@@ -142,6 +142,11 @@
   ],
   "routes": [
     {
+      "src": "/packages/([^/]+)$",
+      "status": 301,
+      "headers": { "Location": "/packages/$1/" }
+    },
+    {
       "src": "/01-setup/main.js",
       "dest": "/packages/01-setup/main.js"
     },
