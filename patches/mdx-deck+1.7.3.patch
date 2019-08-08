@@ -1,0 +1,14 @@
+diff --git a/node_modules/mdx-deck/lib/html.js b/node_modules/mdx-deck/lib/html.js
+index c0fa757..cd1a686 100644
+--- a/node_modules/mdx-deck/lib/html.js
++++ b/node_modules/mdx-deck/lib/html.js
+@@ -34,7 +34,8 @@ const getApp = async opts => {
+       whitelist: [
+         'mdx-deck',
+         'mdx-deck/themes',
+-        'mdx-deck/layouts'
++        'mdx-deck/layouts',
++        'mdx-deck-code-surfer',
+       ]
+     })
+   ]
