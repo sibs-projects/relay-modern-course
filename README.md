@@ -19,6 +19,11 @@ Not yet, if I receive enough donations to buy a microphone I will record the cou
 
 Who donated will have the course for free
 
+## This is a course for a web client, is there a default server to be used with it?
+Yes! thanks to docker-compose you can get a server up and running with ease!
+
+Just go here: https://github.com/BigsonLvrocha/relay-modern-typescript-server and follow readme instructions
+
 ## Donation
 
 <a href="https://www.patreon.com/bePatron?u=15063401" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
