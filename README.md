@@ -30,7 +30,7 @@ Did you like this course?
 
 I will give a workshop with more modern Relay features and Render as You Fetch pattern on React Europe (https://twitter.com/reacteurope/status/1194908997452795904?s=21)
 
-If you are interested in a workshop like this for you company, send me an email here: sibeliusseraphini@gmail.com
+If you are interested in a workshop like this for you company (React, React Native, GraphQL, Relay), send me an email here: sibeliusseraphini@gmail.com
 
 ## Donation
 
