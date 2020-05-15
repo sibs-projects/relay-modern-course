@@ -36,6 +36,8 @@ React Europe Live Demo Youtube Video https://twitter.com/ReactEurope/status/1227
 
 If you are interested in a workshop like this for you company (React, React Native, GraphQL, Relay), send me an email here: sibeliusseraphini@gmail.com
 
+Workshop Link https://github.com/sibelius/relay-workshop
+
 ## Donation
 
 <a href="https://www.patreon.com/bePatron?u=15063401" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
