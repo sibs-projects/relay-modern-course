@@ -43,7 +43,3 @@ Workshop Link https://github.com/sibelius/relay-workshop
 <a href="https://www.patreon.com/bePatron?u=15063401" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
 
 https://www.patreon.com/sibelius
-
-bitcoin://19GnwFBaun46QY6GF1w25zatKWrBhbDcUs
-
-![bitcoin](./img/sibelius.jpg)
