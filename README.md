@@ -28,7 +28,7 @@ Just go here: https://github.com/BigsonLvrocha/relay-modern-typescript-server an
 
 Did you like this course?
 
-I will give a workshop with more modern Relay features and Render as You Fetch pattern on React Europe (https://twitter.com/reacteurope/status/1194908997452795904?s=21)
+I gave a workshop with more modern Relay features and Render as You Fetch pattern on React Europe (https://twitter.com/reacteurope/status/1194908997452795904?s=21)
 
 React Europe Demo https://react-europe-relay-workshop.now.sh/
 
