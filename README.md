@@ -1,3 +1,8 @@
+# Notice
+
+For the new Relay hooks API + suspense check https://github.com/sibelius/relay-workshop
+Relay Workshop has also a set of practical exercises that will make you learn more
+
 # Relay Modern
 
 Companion slides to the Relay Modern Course
