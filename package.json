@@ -5,7 +5,7 @@
   "author": "Sibelius Seraphini",
   "dependencies": {
     "codemirror": "^5.43.0",
-    "react-codemirror2": "^5.1.0"
+    "react-codemirror2": "^7.2.1"
   },
   "devDependencies": {
     "gh-pages": "3.1.0",
