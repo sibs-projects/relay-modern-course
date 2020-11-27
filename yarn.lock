@@ -4297,10 +4297,10 @@ mdx-deck-code-surfer@0.5.5:
     code-surfer "^0.5.5"
     memoize-one "^4.0.2"
 
-mdx-deck-live-code@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/mdx-deck-live-code/-/mdx-deck-live-code-1.0.0.tgz#c8cc2cfbe4f3814bb862ba21ffbb9b53740c9957"
-  integrity sha512-rlel6N9phQp+bf5t/H4RF+k+5fsrdC6fs6T3t4xWHguRNIRQjQVfsRxGPlHOkVjTC6xVyQs0+Dw5G99CIyqfAQ==
+mdx-deck-live-code@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mdx-deck-live-code/-/mdx-deck-live-code-1.0.1.tgz#31e9d792732944bae951952cd6afdcfa4c7c3eb2"
+  integrity sha512-2ru95wQeft2nCj8Ne9mDBIkS+Ej7QlKfaJd6TBXATv+/VoTye68bl9MUy91QLNiWkUGmL64f6Tx3bxLW5fwdsg==
   dependencies:
     react-live "^1.11.0"
 
