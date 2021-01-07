@@ -6968,6 +6968,11 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+hoist-non-react-statics@^1.0.3:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+  integrity sha1-qkSM8JhtVcxAdzsXF0t90GbLfPs=
+
 hoist-non-react-statics@^3.3.0:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
@@ -8569,12 +8574,13 @@ mdurl@^1.0.0:
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
-mdx-code@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/mdx-code/-/mdx-code-1.1.3.tgz#766e6528fcb5fae1f45d75e40da5e182ecf8862a"
-  integrity sha512-m5lCzCJYpHHIgW6Qefxt9skGWfVkOBPigi4etPOxz4xEiEUD8dQP6yEvHcNyhNQS24KQ8vW8DRV2P/8SAn48YQ==
+mdx-code@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/mdx-code/-/mdx-code-2.0.0.tgz#ff0d1f563b134cc919ea8562acc81143e3f188fc"
+  integrity sha512-wI4D1Kxb2l0O82gpw1VsSkgdEa/ttJIqKTerHRDnyDyt649KUoBOIGa6Fqogk2xuwIlEfrUdp6kKxpzrU+i3mA==
   dependencies:
-    react-runkit "0.9.0"
+    react-async-script-loader "^0.3.0"
+    react-runkit "^0.9.0"
 
 mdx-deck-code-surfer@0.5.5:
   version "0.5.5"
@@ -10664,6 +10670,13 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-async-script-loader@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-async-script-loader/-/react-async-script-loader-0.3.0.tgz#c742b3ca25e08ba61ab7eb64371f814027692b86"
+  integrity sha1-x0KzyiXgi6Yat+tkNx+BQCdpK4Y=
+  dependencies:
+    hoist-non-react-statics "^1.0.3"
+
 react-codemirror2@^7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/react-codemirror2/-/react-codemirror2-7.2.1.tgz#38dab492fcbe5fb8ebf5630e5bb7922db8d3a10c"
@@ -10770,7 +10783,7 @@ react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-runkit@0.9.0:
+react-runkit@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/react-runkit/-/react-runkit-0.9.0.tgz#8a97aec60c2fcf9da17b0af2bb91a877e4336b05"
   integrity sha1-ipeuxgwvz52hewryu5God+QzawU=
