@@ -13,7 +13,7 @@
     "mdx-deck": "4.1.1",
     "mdx-deck-code-surfer": "0.5.5",
     "mdx-deck-live-code": "1.0.1",
-    "patch-package": "^6.2.2",
+    "patch-package": "^6.4.0",
     "raw-loader": "4.0.2"
   },
   "keywords": [],
